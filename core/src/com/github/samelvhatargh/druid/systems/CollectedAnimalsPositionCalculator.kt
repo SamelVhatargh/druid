@@ -20,15 +20,11 @@ class CollectedAnimalsPositionCalculator : EntitySystem() {
         val entities = engine.getEntitiesFor(allOf(Animal::class, CollectedAnimal::class, Position::class).get())
         val totalCount = entities.size()
 
-        println(totalCount)
-
         for (i in 0 until totalCount) {
             val position = entities[i][Position.mapper]!!
 
             position.vec.set(0f, 1f)
             position.vec.rotateDeg(i * (360 / totalCount).toFloat() + druid.angle)
-
-            println("${position.vec}")
         }
     }
 }
