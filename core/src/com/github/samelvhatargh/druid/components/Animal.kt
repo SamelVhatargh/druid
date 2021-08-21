@@ -6,7 +6,10 @@ import ktx.ashley.mapperFor
 
 
 enum class Species(val sprite: String) {
-    COW("cow")
+    COW("cow"),
+    DUCK("duck"),
+    PIG("pig"),
+    CHICK("chick"),
 }
 
 class Animal : Component, Pool.Poolable {

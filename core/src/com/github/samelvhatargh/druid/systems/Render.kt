@@ -24,8 +24,8 @@ class Render(private val batch: SpriteBatch, private val camera: Camera, private
         val animal = entity[Animal.mapper]!!
         val position = entity[Position.mapper]!!.vec
         val sprite = spriteCache.getSprite(animal.species.sprite)
-            sprite.setPosition( position.x - .5f, position.y -.5f)
-            sprite.setScale(1f)
-            sprite.draw(batch)
+
+        sprite.setPosition(position.x - .5f, position.y - .5f)
+        sprite.draw(batch)
     }
 }

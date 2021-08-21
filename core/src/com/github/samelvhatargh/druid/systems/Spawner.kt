@@ -4,6 +4,7 @@ import com.badlogic.ashley.core.EntitySystem
 import com.badlogic.gdx.math.MathUtils.random
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.Position
+import com.github.samelvhatargh.druid.components.Species
 import ktx.ashley.entity
 import ktx.ashley.with
 import ktx.math.vec2
@@ -26,7 +27,9 @@ class Spawner() : EntitySystem() {
 
     private fun spawn() {
         engine.entity {
-            with<Animal>()
+            with<Animal> {
+                species = Species.values().random()
+            }
             with<Position> {
                 vec = vec2(0f, spawnDistance).apply {
                     rotateDeg(random(0f, 360f))
