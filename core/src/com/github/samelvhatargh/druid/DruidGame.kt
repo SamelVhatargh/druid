@@ -2,6 +2,7 @@ package com.github.samelvhatargh.druid
 
 import com.badlogic.ashley.core.PooledEngine
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
@@ -23,9 +24,12 @@ class DruidGame : KtxGame<KtxScreen>() {
         val world = World(engine)
         world.create()
 
-        Gdx.input.inputProcessor = PlayerInput(camera, engine)
+        val inputMultiplexer = InputMultiplexer()
+        Gdx.input.inputProcessor = inputMultiplexer
+
 
         engine.apply {
+            addSystem(PlayerInput(inputMultiplexer, camera, engine))
             addSystem(Aging())
             addSystem(Spawner())
             addSystem(Move())
