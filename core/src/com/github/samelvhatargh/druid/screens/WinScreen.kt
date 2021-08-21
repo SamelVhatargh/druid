@@ -12,7 +12,7 @@ import com.github.samelvhatargh.druid.DruidGame
 import ktx.actors.onClick
 import ktx.scene2d.*
 
-class StartScreen(
+class WinScreen(
     engine: Engine,
     private val atlas: TextureAtlas,
     private val game: DruidGame,
@@ -32,7 +32,7 @@ class StartScreen(
             table {
                 setFillParent(true)
                 onClick {
-                    game.setScreen<PlayScreen>()
+                    Gdx.app.exit()
                 }
                 stack {
                     image(atlas.findRegion("white")) {
@@ -43,7 +43,7 @@ class StartScreen(
                     table {
                         width = tableWidth
                         it.width = tableWidth
-                        label("Hello apprentice!") { cell ->
+                        label("Congratulations!") { cell ->
                             cell.padTop(padding).padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             width = tableWidth
@@ -51,7 +51,7 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        label("You have to prove yourself, if you want to become a full member of our druid circle.") { cell ->
+                        label("Your companions are powerful indeed.") { cell ->
                             cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             setAlignment(Align.center)
@@ -59,7 +59,7 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        label("Charm animals, train them and show us that you have enough mana to keep them around.") { cell ->
+                        label("Now you can call yourself a druid.") { cell ->
                             cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             setAlignment(Align.center)
@@ -67,7 +67,7 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        label("Click anywhere to begin.", style = "small") { cell ->
+                        label("Click anywhere to exit.", style = "small") { cell ->
                             cell.padBottom(padding)
                         }
 

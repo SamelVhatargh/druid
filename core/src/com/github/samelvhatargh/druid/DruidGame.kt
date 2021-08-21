@@ -57,6 +57,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
 
 
         val spriteCache = SpriteCache(spriteAtlas)
+        val game = this
 
         engine.apply {
             addSystem(PlayerInput(inputMultiplexer, camera, engine).apply { setProcessing(false) })
@@ -65,6 +66,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
             addSystem(Move().apply { setProcessing(false) })
             addSystem(Collect().apply { setProcessing(false) })
             addSystem(LevelUp().apply { setProcessing(false) })
+            addSystem(EndGame(game).apply { setProcessing(false) })
             addSystem(CollectedAnimalsPositionCalculator().apply { setProcessing(false) })
             addSystem(MiscRender(batch, camera, spriteCache))
             addSystem(LevelRender(batch, camera).apply { setProcessing(false) })
@@ -72,8 +74,8 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
         }
 
         addScreen(PlayScreen(engine))
-        addScreen(LoseScreen(engine))
-        addScreen(WinScreen(engine))
+        addScreen(LoseScreen(engine, spriteAtlas, this, inputMultiplexer))
+        addScreen(WinScreen(engine, spriteAtlas, this, inputMultiplexer))
         addScreen(StartScreen(engine, spriteAtlas, this, inputMultiplexer))
         setScreen<StartScreen>()
     }

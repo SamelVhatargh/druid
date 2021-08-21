@@ -19,6 +19,7 @@ class PlayScreen(engine: Engine) : Screen(engine) {
         engine.getSystem<CollectedAnimalsPositionCalculator>().setProcessing(true)
         engine.getSystem<LevelRender>().setProcessing(true)
         engine.getSystem<AnimalRender>().setProcessing(true)
+        engine.getSystem<EndGame>().setProcessing(true)
     }
 
     override fun hide() {
@@ -32,6 +33,7 @@ class PlayScreen(engine: Engine) : Screen(engine) {
         engine.getSystem<CollectedAnimalsPositionCalculator>().setProcessing(false)
         engine.getSystem<LevelRender>().setProcessing(false)
         engine.getSystem<AnimalRender>().setProcessing(false)
+        engine.getSystem<EndGame>().setProcessing(false)
     }
 
 }
