@@ -8,8 +8,10 @@ import ktx.ashley.mapperFor
 
 class Animal : Component, Pool.Poolable {
 
-    override fun reset() {
+    var age = 0f
 
+    override fun reset() {
+        age = 0f
     }
 
     companion object {
