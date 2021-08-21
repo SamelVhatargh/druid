@@ -10,7 +10,7 @@ import ktx.ashley.with
 /**
  * Contains basic information about world
  */
-class World(private val engine: Engine, private val img: Texture) {
+class World(private val engine: Engine) {
 
     val collectedAnimals: MutableList<Entity> = mutableListOf()
 
@@ -27,13 +27,12 @@ class World(private val engine: Engine, private val img: Texture) {
     }
 
     private fun createAnimal() {
-        val entity = engine.entity {
+        engine.entity {
             with<Animal>()
             with<CollectedAnimal>()
             with<Position> {
 
             }
         }
-        entity.add(Graphics(img))
     }
 }
