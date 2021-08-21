@@ -7,6 +7,7 @@ import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
+import com.badlogic.gdx.utils.viewport.FitViewport
 import com.github.samelvhatargh.druid.screens.PlayScreen
 import com.github.samelvhatargh.druid.systems.*
 import ktx.app.KtxGame
@@ -14,7 +15,8 @@ import ktx.app.KtxScreen
 
 class DruidGame : KtxGame<KtxScreen>() {
     private val batch by lazy { SpriteBatch() }
-    private val camera by lazy { OrthographicCamera(16f * 1.5f, 9f * 1.5f) }
+    private val camera by lazy { OrthographicCamera(Config.cameraWidth, Config.cameraHeight) }
+    private val viewport by lazy { FitViewport(Config.cameraWidth, Config.cameraHeight, camera) }
     private lateinit var spriteAtlas: TextureAtlas
 
     private val engine = PooledEngine()
@@ -45,6 +47,11 @@ class DruidGame : KtxGame<KtxScreen>() {
 
         addScreen(PlayScreen(engine))
         setScreen<PlayScreen>()
+    }
+
+    override fun resize(width: Int, height: Int) {
+        super.resize(width, height)
+        viewport.update(width, height)
     }
 
     override fun dispose() {

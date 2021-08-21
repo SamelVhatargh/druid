@@ -2,6 +2,7 @@ package com.github.samelvhatargh.druid.desktop
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
+import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.DruidGame
 
 fun main() {
@@ -9,7 +10,8 @@ fun main() {
         DruidGame(),
         Lwjgl3ApplicationConfiguration().apply {
             setTitle("Druid and His Circle of Animals")
-            setWindowedMode(16 * 64, 9 * 64)
+            setMaximized(true)
+            setWindowedMode(Config.windowWidth, Config.windowHeight)
         }
     )
 }
