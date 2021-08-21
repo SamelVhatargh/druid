@@ -34,7 +34,7 @@ class DruidGame : KtxGame<KtxScreen>() {
         engine.apply {
             addSystem(PlayerInput(inputMultiplexer, camera, engine))
             addSystem(Aging())
-            addSystem(Spawner(inputMultiplexer, camera, true))
+            addSystem(Spawner(inputMultiplexer, camera))
             addSystem(Move())
             addSystem(Collect())
             addSystem(LevelUp())
