@@ -17,7 +17,7 @@ class Move : IteratingSystem(allOf(Animal::class, Position::class).exclude(Colle
         val position = entity[Position.mapper]!!
         val animal = entity[Animal.mapper]!!
 
-        val alpha = animal.age / Config.animalSpeed
+        val alpha = animal.age / animal.speed
         if (alpha <= 1f) {
             position.vec.setLength(Config.spawnDistance).lerp(vec2(0f, 0f), alpha)
         }

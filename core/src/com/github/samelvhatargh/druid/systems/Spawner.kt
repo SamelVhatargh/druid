@@ -15,6 +15,7 @@ import ktx.ashley.entity
 import ktx.ashley.get
 import ktx.ashley.with
 import ktx.log.logger
+import ktx.math.random
 import ktx.math.vec2
 import ktx.math.vec3
 
@@ -25,6 +26,7 @@ class Spawner(
 ) : InputSystem(inputMultiplexer) {
 
     var lastSpawn = Config.spawnRate
+    var nextSpan = Config.spawnRate
 
     override fun update(deltaTime: Float) {
         if (debug) {
@@ -32,9 +34,11 @@ class Spawner(
         }
         lastSpawn += deltaTime
 
-        if (lastSpawn >= Config.spawnRate) {
+        if (lastSpawn >= nextSpan) {
             spawn()
             lastSpawn -= Config.spawnRate
+            nextSpan = ((Config.spawnRate - Config.spawnRateVariation)
+                    ..(Config.spawnRate + Config.spawnRateVariation)).random()
         }
     }
 
@@ -63,6 +67,8 @@ class Spawner(
         engine.entity {
             with<Animal> {
                 species = Species.values().random()
+                speed = ((Config.animalSpeed - Config.animalSpeedVariation)
+                        ..(Config.animalSpeed + Config.animalSpeedVariation)).random()
             }
             with<Position> {
                 vec = vec2(0f, Config.spawnDistance).apply {

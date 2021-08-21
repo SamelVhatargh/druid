@@ -12,10 +12,12 @@ object Config {
     const val fullRotateDistance = 9f
 
     //move
-    const val animalSpeed = 2f
+    const val animalSpeed = 1.5f
+    const val animalSpeedVariation = .25f
 
     //spawn
-    const val spawnRate = 2f
+    const val spawnRate = 1.25f
+    const val spawnRateVariation = .25f
     const val spawnDistance = cameraHeight / 2
     const val spawnDebug = false
 
