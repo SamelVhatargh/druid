@@ -33,6 +33,8 @@ class DruidGame : KtxGame<KtxScreen>() {
         Gdx.input.inputProcessor = inputMultiplexer
 
 
+        val spriteCache = SpriteCache(spriteAtlas)
+
         engine.apply {
             addSystem(PlayerInput(inputMultiplexer, camera, engine))
             addSystem(Aging())
@@ -41,8 +43,9 @@ class DruidGame : KtxGame<KtxScreen>() {
             addSystem(Collect())
             addSystem(LevelUp())
             addSystem(CollectedAnimalsPositionCalculator())
+            addSystem(MiscRender(batch, camera, spriteCache))
             addSystem(LevelRender(batch, camera))
-            addSystem(AnimalRender(batch, camera, SpriteCache(spriteAtlas)))
+            addSystem(AnimalRender(batch, camera, spriteCache))
         }
 
         addScreen(PlayScreen(engine))

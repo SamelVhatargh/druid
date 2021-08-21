@@ -6,210 +6,217 @@ filter: Nearest,Nearest
 repeat: none
 bear
   rotate: false
-  xy: 1702, 138
+  xy: 847, 200
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 buffalo
   rotate: false
-  xy: 136, 268
+  xy: 2, 2
   size: 129, 129
   orig: 129, 129
   offset: 0, 0
   index: -1
 chick
   rotate: false
-  xy: 267, 269
+  xy: 592, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 chicken
   rotate: false
-  xy: 1834, 269
+  xy: 1627, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 cow
   rotate: false
-  xy: 136, 138
+  xy: 461, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 crocodile
   rotate: false
-  xy: 2, 2
+  xy: 330, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 dog
   rotate: false
-  xy: 921, 139
+  xy: 1902, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 duck
   rotate: false
-  xy: 922, 269
+  xy: 1771, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
+dude
+  rotate: false
+  xy: 2, 267
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
 elephant
   rotate: false
-  xy: 398, 269
+  xy: 723, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 frog
   rotate: false
-  xy: 1442, 138
+  xy: 587, 200
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 giraffe
   rotate: false
-  xy: 1572, 138
+  xy: 717, 200
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 goat
   rotate: false
-  xy: 267, 138
+  xy: 457, 200
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 gorilla
   rotate: false
-  xy: 659, 139
+  xy: 1378, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 hippo
   rotate: false
-  xy: 1574, 269
+  xy: 1367, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 horse
   rotate: false
-  xy: 528, 139
+  xy: 1116, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 monkey
   rotate: false
-  xy: 1444, 269
+  xy: 1237, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 moose
   rotate: false
-  xy: 660, 269
+  xy: 1247, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 narwhal
   rotate: false
-  xy: 2, 265
+  xy: 2, 133
   size: 132, 132
   orig: 132, 132
   offset: 0, 0
   index: -1
 owl
   rotate: false
-  xy: 1184, 269
+  xy: 266, 68
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 panda
   rotate: false
-  xy: 1053, 269
+  xy: 196, 198
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 parrot
   rotate: false
-  xy: 397, 139
+  xy: 854, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 penguin
   rotate: false
-  xy: 790, 139
+  xy: 1640, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 pig
   rotate: false
-  xy: 1312, 139
+  xy: 1107, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 rabbit
   rotate: false
-  xy: 529, 269
+  xy: 985, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 rhino
   rotate: false
-  xy: 1314, 269
+  xy: 977, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 sloth
   rotate: false
-  xy: 791, 269
+  xy: 1509, 331
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 snake
   rotate: false
-  xy: 1052, 139
+  xy: 136, 68
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 walrus
   rotate: false
-  xy: 1704, 269
+  xy: 1497, 201
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 whale
   rotate: false
-  xy: 2, 132
+  xy: 196, 328
   size: 132, 131
   orig: 132, 131
   offset: 0, 0
   index: -1
 zebra
   rotate: false
-  xy: 1182, 139
+  xy: 327, 198
   size: 128, 128
   orig: 128, 128
   offset: 0, 0

@@ -7,7 +7,7 @@ import ktx.ashley.mapperFor
 class Druid : Component, Pool.Poolable {
 
     var angle = 0f
-    var radius = .6f
+    var radius = 1f
     var animalsCount = 0
 
     override fun reset() {
