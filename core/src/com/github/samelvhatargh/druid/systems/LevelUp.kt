@@ -24,7 +24,7 @@ class LevelUp : EntitySystem() {
 
         var reachedEnd = false
 
-        while (!reachedEnd) {
+        while (!reachedEnd && animals.size > 2) {
             for (i in animals.indices) {
                 val previousEntity = try {
                     animals[i - 1]
