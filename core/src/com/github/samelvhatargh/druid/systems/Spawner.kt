@@ -4,6 +4,7 @@ import com.badlogic.gdx.Input
 import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.Camera
 import com.badlogic.gdx.math.MathUtils.random
+import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Position
@@ -17,16 +18,13 @@ import ktx.log.logger
 import ktx.math.vec2
 import ktx.math.vec3
 
-const val spawnRate = 2f
-const val spawnDistance = 5f
-
 class Spawner(
     inputMultiplexer: InputMultiplexer,
     private val camera: Camera,
     private val debug: Boolean = false
 ) : InputSystem(inputMultiplexer) {
 
-    var lastSpawn = 0f
+    var lastSpawn = Config.spawnRate
 
     override fun update(deltaTime: Float) {
         if (debug) {
@@ -34,9 +32,9 @@ class Spawner(
         }
         lastSpawn += deltaTime
 
-        if (lastSpawn >= spawnRate) {
+        if (lastSpawn >= Config.spawnRate) {
             spawn()
-            lastSpawn -= spawnRate
+            lastSpawn -= Config.spawnRate
         }
     }
 
@@ -67,7 +65,7 @@ class Spawner(
                 species = Species.values().random()
             }
             with<Position> {
-                vec = vec2(0f, spawnDistance).apply {
+                vec = vec2(0f, Config.spawnDistance).apply {
                     rotateDeg(degrees)
                 }
             }
