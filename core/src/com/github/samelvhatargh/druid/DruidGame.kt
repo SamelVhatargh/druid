@@ -9,6 +9,7 @@ import com.github.samelvhatargh.druid.components.Graphics
 import com.github.samelvhatargh.druid.screens.PlayScreen
 import com.github.samelvhatargh.druid.systems.CollectedAnimalsPositionCalculator
 import com.github.samelvhatargh.druid.systems.Render
+import com.github.samelvhatargh.druid.systems.Spawner
 import ktx.app.KtxGame
 import ktx.app.KtxScreen
 import ktx.ashley.entity
@@ -27,6 +28,7 @@ class DruidGame : KtxGame<KtxScreen>() {
         Gdx.input.inputProcessor = PlayerInput(camera, engine)
 
         engine.apply {
+            addSystem(Spawner(img))
             addSystem(CollectedAnimalsPositionCalculator())
             addSystem(Render(batch, camera))
         }
