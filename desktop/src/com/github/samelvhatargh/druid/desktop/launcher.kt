@@ -10,7 +10,7 @@ fun main() {
         DruidGame(),
         Lwjgl3ApplicationConfiguration().apply {
             setTitle("Druid and His Circle of Animals")
-            setMaximized(true)
+//            setMaximized(true)
             setWindowedMode(Config.windowWidth, Config.windowHeight)
         }
     )

@@ -44,7 +44,7 @@ class Spawner(
 
     override fun touchDown(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean {
         if (!debug) {
-            return true
+            return false
         }
         if (button == Input.Buttons.LEFT) {
             val mouse = camera.unproject(vec3(screenX.toFloat(), screenY.toFloat(), 0f))

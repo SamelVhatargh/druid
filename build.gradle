@@ -65,6 +65,9 @@ project(":core") {
         compile "io.github.libktx:ktx-ashley:$ktxVersion"
         compile "io.github.libktx:ktx-math:$ktxVersion"
         compile "io.github.libktx:ktx-log:$ktxVersion"
+        compile "io.github.libktx:ktx-scene2d:$ktxVersion"
+        compile "io.github.libktx:ktx-style:$ktxVersion"
+        compile "io.github.libktx:ktx-actors:$ktxVersion"
         api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     }
 }

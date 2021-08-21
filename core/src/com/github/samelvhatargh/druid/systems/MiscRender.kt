@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.github.samelvhatargh.druid.Config.cameraWidth
 import com.github.samelvhatargh.druid.SpriteCache
 import com.github.samelvhatargh.druid.getDruid
+import ktx.ashley.getSystem
 import ktx.graphics.use
 
 enum class Tile(val sprite: String) {
@@ -80,7 +81,7 @@ class MiscRender(private val batch: SpriteBatch, private val camera: Camera, pri
 
     override fun update(deltaTime: Float) {
         val druid = engine.getDruid()
-        batch.use() {
+        batch.use(camera.combined) {
             for (i in map.indices) {
                 for (j in map[i].indices) {
                     val tile = spriteCache.getSprite(map[i][j].sprite)
@@ -91,24 +92,25 @@ class MiscRender(private val batch: SpriteBatch, private val camera: Camera, pri
                     tile.draw(batch)
                 }
             }
-        }
-        batch.use(camera.combined) {
-            var manaDrawn = 0
-            for (i in 1..druid.maxMana) {
-                val rune = if (manaDrawn < druid.mana) spriteCache.getSprite("runeGrey_slabOutline", runes[i])
+
+            if (engine.getSystem<PlayerInput>().checkProcessing()) {
+                var manaDrawn = 0
+                for (i in 1..druid.maxMana) {
+                    val rune = if (manaDrawn < druid.mana) spriteCache.getSprite("runeGrey_slabOutline", runes[i])
                     else spriteCache.getSprite("runeBlack_slabOutline", 35)
-                rune.setSize(56/93f, 1f)
-                rune.setPosition((i - cameraWidth / 2) * .75f - 5.5f, 10f)
-                rune.draw(batch)
-                manaDrawn++
+                    rune.setSize(56 / 93f, 1f)
+                    rune.setPosition((i - cameraWidth / 2) * .75f - 5.5f, 10f)
+                    rune.draw(batch)
+                    manaDrawn++
+                }
+
+                val sprite = spriteCache.getSprite("dude")
+
+                sprite.setPosition(-.5f, -.5f)
+                sprite.setOriginCenter()
+                sprite.rotation = druid.angle
+                sprite.draw(batch)
             }
-
-            val sprite = spriteCache.getSprite("dude")
-
-            sprite.setPosition(-.5f, -.5f)
-            sprite.setOriginCenter()
-            sprite.rotation = druid.angle
-            sprite.draw(batch)
         }
     }
 }
