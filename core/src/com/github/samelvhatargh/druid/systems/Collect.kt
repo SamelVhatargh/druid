@@ -59,6 +59,7 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
             }
 
             druid.animalsCount++
+            druid.mana--
             druid.radius += .1f
         }
     }

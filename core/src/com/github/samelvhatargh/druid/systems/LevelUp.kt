@@ -49,6 +49,7 @@ class LevelUp : EntitySystem() {
                     engine.removeEntity(previousEntity)
                     engine.removeEntity(nextEntity)
                     engine.getDruid().animalsCount -= 2
+                    engine.getDruid().mana += 2
                     engine.getDruid().radius -= .2f
                     animals.remove(previousEntity)
                     animals.remove(nextEntity)

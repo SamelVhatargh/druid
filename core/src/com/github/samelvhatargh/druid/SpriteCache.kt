@@ -15,16 +15,17 @@ class SpriteCache(private val atlas: TextureAtlas) {
 
     private val cache = mutableMapOf<String, Sprite>()
 
-    fun getSprite(name: String): Sprite {
-        var sprite = cache[name]
+    fun getSprite(name: String, index: Int = -1): Sprite {
+        val key = "${name}_$index"
+        var sprite = cache[key]
         if (sprite == null) {
-            val region = atlas.findRegion(name)
-            require(region != null) { "Cant load sprite $name" }
+            val region = atlas.findRegion(name, index)
+            require(region != null) { "Cant load sprite $key" }
 
             sprite = Sprite(region).apply {
                 setSize(1f, 1f)
             }
-            cache[name] = sprite
+            cache[key] = sprite
 
             log.debug { "sprite $name created" }
         }
