@@ -14,7 +14,7 @@ import ktx.app.KtxScreen
 
 class DruidGame : KtxGame<KtxScreen>() {
     private val batch by lazy { SpriteBatch() }
-    private val camera by lazy { OrthographicCamera(16f, 9f) }
+    private val camera by lazy { OrthographicCamera(16f * 2, 9f * 2) }
     private lateinit var spriteAtlas: TextureAtlas
 
     private val engine = PooledEngine()
@@ -34,9 +34,10 @@ class DruidGame : KtxGame<KtxScreen>() {
         engine.apply {
             addSystem(PlayerInput(inputMultiplexer, camera, engine))
             addSystem(Aging())
-            addSystem(Spawner(inputMultiplexer, camera))
+            addSystem(Spawner(inputMultiplexer, camera, true))
             addSystem(Move())
             addSystem(Collect())
+            addSystem(LevelUp())
             addSystem(CollectedAnimalsPositionCalculator())
             addSystem(LevelRender(batch, camera))
             addSystem(AnimalRender(batch, camera, SpriteCache(spriteAtlas)))

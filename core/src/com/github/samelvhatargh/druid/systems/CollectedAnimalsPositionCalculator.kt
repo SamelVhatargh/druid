@@ -6,6 +6,7 @@ import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Druid
 import com.github.samelvhatargh.druid.components.Position
+import com.github.samelvhatargh.druid.getDruid
 import ktx.ashley.allOf
 import ktx.ashley.get
 
@@ -22,7 +23,7 @@ class CollectedAnimalsPositionCalculator :
     }
 
     override fun processEntity(entity: Entity, deltaTime: Float) {
-        val druid = engine.getEntitiesFor(allOf(Druid::class).get()).first()[Druid.mapper]!!
+        val druid = engine.getDruid()
         val position = entity[Position.mapper]!!
         val collectedAnimal = entity[CollectedAnimal.mapper]!!
 
