@@ -16,12 +16,6 @@ class World(private val engine: Engine, private val img: Texture) {
 
     fun create() {
         createDruid()
-        createAnimal()
-        createAnimal()
-        createAnimal()
-        createAnimal()
-        createAnimal()
-        createAnimal()
     }
 
     private fun createDruid() {

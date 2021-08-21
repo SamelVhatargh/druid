@@ -18,6 +18,7 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
 
         if (position.vec.len() <= druid.radius) {
             entity.add(CollectedAnimal())
+            druid.radius += .1f
         }
     }
 }
