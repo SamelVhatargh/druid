@@ -20,13 +20,13 @@ class DruidGame : KtxGame<KtxScreen>() {
     private val engine = PooledEngine()
 
     override fun create() {
+        val world = World(engine, img)
+        world.create()
+
         engine.apply {
             addSystem(CollectedAnimalsPositionCalculator())
             addSystem(Render(batch, camera))
         }
-
-        val world = World(engine, img)
-        world.create()
 
         addScreen(PlayScreen(engine))
         setScreen<PlayScreen>()
