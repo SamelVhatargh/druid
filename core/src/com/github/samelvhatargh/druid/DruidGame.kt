@@ -14,7 +14,7 @@ import ktx.app.KtxScreen
 
 class DruidGame : KtxGame<KtxScreen>() {
     private val batch by lazy { SpriteBatch() }
-    private val camera by lazy { OrthographicCamera(16f * 2, 9f * 2) }
+    private val camera by lazy { OrthographicCamera(16f * 1.5f, 9f * 1.5f) }
     private lateinit var spriteAtlas: TextureAtlas
 
     private val engine = PooledEngine()
