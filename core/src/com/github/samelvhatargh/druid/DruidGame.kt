@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.github.samelvhatargh.druid.components.Graphics
 import com.github.samelvhatargh.druid.screens.PlayScreen
+import com.github.samelvhatargh.druid.systems.CollectedAnimalsPositionCalculator
 import com.github.samelvhatargh.druid.systems.Render
 import ktx.app.KtxGame
 import ktx.app.KtxScreen
@@ -20,11 +21,12 @@ class DruidGame : KtxGame<KtxScreen>() {
 
     override fun create() {
         engine.apply {
+            addSystem(CollectedAnimalsPositionCalculator())
             addSystem(Render(batch, camera))
         }
 
-        val entity = engine.entity {  }
-        entity.add(Graphics(img))
+        val world = World(engine, img)
+        world.create()
 
         addScreen(PlayScreen(engine))
         setScreen<PlayScreen>()
