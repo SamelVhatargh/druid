@@ -16,10 +16,12 @@ class Animal : Component, Pool.Poolable {
 
     var age = 0f
     var species = Species.COW
+    var level = 1
 
     override fun reset() {
         age = 0f
         species = Species.COW
+        level = 1
     }
 
     companion object {

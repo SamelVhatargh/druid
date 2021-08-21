@@ -11,7 +11,7 @@ import ktx.ashley.allOf
 import ktx.ashley.get
 import ktx.graphics.use
 
-class Render(private val batch: SpriteBatch, private val camera: Camera, private val spriteCache: SpriteCache) :
+class AnimalRender(private val batch: SpriteBatch, private val camera: Camera, private val spriteCache: SpriteCache) :
     IteratingSystem(allOf(Animal::class, Position::class).get()) {
 
     override fun update(deltaTime: Float) {

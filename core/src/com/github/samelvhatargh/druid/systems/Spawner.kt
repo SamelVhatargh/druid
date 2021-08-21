@@ -16,7 +16,7 @@ import ktx.log.logger
 import ktx.math.vec2
 import ktx.math.vec3
 
-const val spawnRate = 1f
+const val spawnRate = 2f
 const val spawnDistance = 5f
 
 class Spawner(
@@ -44,6 +44,9 @@ class Spawner(
     }
 
     override fun touchDown(screenX: Int, screenY: Int, pointer: Int, button: Int): Boolean {
+        if (!debug) {
+            return true
+        }
         if (button == Input.Buttons.LEFT) {
             val mouse = camera.unproject(vec3(screenX.toFloat(), screenY.toFloat(), 0f))
             val angle = vec2(mouse.x, mouse.y).sub(vec2(0f, 0f)).angleDeg() - 90f

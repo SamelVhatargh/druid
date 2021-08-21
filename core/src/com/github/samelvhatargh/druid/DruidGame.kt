@@ -38,7 +38,8 @@ class DruidGame : KtxGame<KtxScreen>() {
             addSystem(Move())
             addSystem(Collect())
             addSystem(CollectedAnimalsPositionCalculator())
-            addSystem(Render(batch, camera, SpriteCache(spriteAtlas)))
+            addSystem(LevelRender(batch, camera))
+            addSystem(AnimalRender(batch, camera, SpriteCache(spriteAtlas)))
         }
 
         addScreen(PlayScreen(engine))
