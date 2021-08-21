@@ -6,8 +6,10 @@ import ktx.ashley.mapperFor
 
 class CollectedAnimal : Component, Pool.Poolable {
 
-    override fun reset() {
+    var id = 0
 
+    override fun reset() {
+        id = 0
     }
 
     companion object {

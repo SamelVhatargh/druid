@@ -1,6 +1,7 @@
 package com.github.samelvhatargh.druid.systems
 
-import com.badlogic.ashley.core.EntitySystem
+import com.badlogic.ashley.core.Entity
+import com.badlogic.ashley.systems.IteratingSystem
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Druid
@@ -8,21 +9,16 @@ import com.github.samelvhatargh.druid.components.Position
 import ktx.ashley.allOf
 import ktx.ashley.get
 
-class CollectedAnimalsPositionCalculator : EntitySystem() {
+class CollectedAnimalsPositionCalculator :
+    IteratingSystem(allOf(Animal::class, CollectedAnimal::class, Position::class).get()) {
 
 
-    override fun update(deltaTime: Float) {
-        super.update(deltaTime)
-
+    override fun processEntity(entity: Entity, deltaTime: Float) {
         val druid = engine.getEntitiesFor(allOf(Druid::class).get()).first()[Druid.mapper]!!
-        val entities = engine.getEntitiesFor(allOf(Animal::class, CollectedAnimal::class, Position::class).get())
-        val totalCount = entities.size()
+        val position = entity[Position.mapper]!!
+        val collectedAnimal = entity[CollectedAnimal.mapper]!!
 
-        for (i in 0 until totalCount) {
-            val position = entities[i][Position.mapper]!!
-
-            position.vec.set(0f, druid.radius)
-            position.vec.rotateDeg(i * (360 / totalCount).toFloat() + druid.angle)
-        }
+        position.vec.set(0f, druid.radius)
+        position.vec.rotateDeg(collectedAnimal.id * (360 / druid.animalsCount).toFloat() + druid.angle)
     }
 }

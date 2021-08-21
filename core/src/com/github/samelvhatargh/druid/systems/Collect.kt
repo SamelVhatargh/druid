@@ -17,7 +17,12 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
         val druid = engine.getEntitiesFor(allOf(Druid::class).get()).first()[Druid.mapper]!!
 
         if (position.vec.len() <= druid.radius) {
-            entity.add(CollectedAnimal())
+            val collectedAnimal = CollectedAnimal().apply {
+                id = druid.animalsCount
+            }
+
+            entity.add(collectedAnimal)
+            druid.animalsCount++
             druid.radius += .1f
         }
     }

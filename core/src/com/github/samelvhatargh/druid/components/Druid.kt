@@ -8,10 +8,12 @@ class Druid : Component, Pool.Poolable {
 
     var angle = 0f
     var radius = .6f
+    var animalsCount = 0
 
     override fun reset() {
         angle = 0f
         radius = 0f
+        animalsCount = 0
     }
 
     companion object {
