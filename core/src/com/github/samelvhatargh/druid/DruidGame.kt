@@ -12,8 +12,9 @@ import com.github.samelvhatargh.druid.screens.PlayScreen
 import com.github.samelvhatargh.druid.systems.*
 import ktx.app.KtxGame
 import ktx.app.KtxScreen
+import ktx.app.clearScreen
 
-class DruidGame : KtxGame<KtxScreen>() {
+class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
     private val batch by lazy { SpriteBatch() }
     private val camera by lazy { OrthographicCamera(Config.cameraWidth, Config.cameraHeight) }
     private val viewport by lazy { FitViewport(Config.cameraWidth, Config.cameraHeight, camera) }
@@ -50,6 +51,11 @@ class DruidGame : KtxGame<KtxScreen>() {
 
         addScreen(PlayScreen(engine))
         setScreen<PlayScreen>()
+    }
+
+    override fun render() {
+        clearScreen(39f/255, 174f/255, 96f/255, 1f)
+        super.render()
     }
 
     override fun resize(width: Int, height: Int) {
