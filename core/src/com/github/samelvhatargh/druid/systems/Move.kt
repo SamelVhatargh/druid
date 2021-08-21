@@ -10,7 +10,7 @@ import ktx.ashley.exclude
 import ktx.ashley.get
 import ktx.math.vec2
 
-const val speed = 2f
+const val speed = 1f
 
 class Move : IteratingSystem(allOf(Animal::class, Position::class).exclude(CollectedAnimal::class).get()) {
 

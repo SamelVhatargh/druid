@@ -1,6 +1,7 @@
 package com.github.samelvhatargh.druid
 
 import com.badlogic.ashley.core.PooledEngine
+import com.badlogic.gdx.Application.LOG_DEBUG
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.OrthographicCamera
@@ -21,6 +22,8 @@ class DruidGame : KtxGame<KtxScreen>() {
     override fun create() {
         spriteAtlas = TextureAtlas(Gdx.files.internal("animals.atlas"))
 
+        Gdx.app.logLevel = LOG_DEBUG
+
         val world = World(engine)
         world.create()
 
@@ -31,7 +34,7 @@ class DruidGame : KtxGame<KtxScreen>() {
         engine.apply {
             addSystem(PlayerInput(inputMultiplexer, camera, engine))
             addSystem(Aging())
-            addSystem(Spawner(inputMultiplexer, camera, true))
+            addSystem(Spawner(inputMultiplexer, camera))
             addSystem(Move())
             addSystem(Collect())
             addSystem(CollectedAnimalsPositionCalculator())
