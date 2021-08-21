@@ -6,6 +6,7 @@ import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Druid
 import com.github.samelvhatargh.druid.components.Position
+import com.github.samelvhatargh.druid.getCollectedAnimals
 import ktx.ashley.allOf
 import ktx.ashley.exclude
 import ktx.ashley.get
@@ -18,8 +19,7 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
 
         if (position.vec.len() <= druid.radius) {
 
-            val collectedAnimals =
-                engine.getEntitiesFor(allOf(Animal::class, CollectedAnimal::class, Position::class).get())
+            val collectedAnimals = engine.getCollectedAnimals()
             val newCollectedAnimals = mutableListOf<Entity>()
 
             val collectedAnimal = CollectedAnimal().apply {

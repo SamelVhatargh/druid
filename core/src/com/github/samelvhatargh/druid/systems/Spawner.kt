@@ -8,6 +8,7 @@ import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Position
 import com.github.samelvhatargh.druid.components.Species
+import com.github.samelvhatargh.druid.getCollectedAnimals
 import ktx.ashley.allOf
 import ktx.ashley.entity
 import ktx.ashley.get
@@ -52,7 +53,7 @@ class Spawner(
             val angle = vec2(mouse.x, mouse.y).sub(vec2(0f, 0f)).angleDeg() - 90f
             spawn(angle)
         } else {
-            engine.getEntitiesFor(allOf(Animal::class, CollectedAnimal::class, Position::class).get()).forEach {
+            engine.getCollectedAnimals().forEach {
                 log.debug { "id: ${it[CollectedAnimal.mapper]!!.id}; order: ${it[CollectedAnimal.mapper]!!.order};angle: ${it[Position.mapper]!!.vec.angleDeg()}; type: ${it[Animal.mapper]!!.species.sprite}" }
             }
         }
