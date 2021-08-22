@@ -60,6 +60,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
         val game = this
 
         engine.apply {
+            addSystem(Music())
             addSystem(PlayerInput(inputMultiplexer, camera, engine).apply { setProcessing(false) })
             addSystem(Aging().apply { setProcessing(false) })
             addSystem(Spawner(inputMultiplexer, camera, Config.spawnDebug).apply { setProcessing(false) })
