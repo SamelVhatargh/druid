@@ -7,6 +7,7 @@ import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.getCollectedAnimals
 import com.github.samelvhatargh.druid.getDruid
 import ktx.ashley.get
+import ktx.ashley.getSystem
 import ktx.log.logger
 
 class LevelUp : EntitySystem() {
@@ -23,6 +24,7 @@ class LevelUp : EntitySystem() {
         }
 
         var reachedEnd = false
+        var levelUpHappened = false
 
         while (!reachedEnd && animals.size > 2) {
             for (i in animals.indices) {
@@ -53,6 +55,7 @@ class LevelUp : EntitySystem() {
                     engine.getDruid().radius -= .2f
                     animals.remove(previousEntity)
                     animals.remove(nextEntity)
+                    levelUpHappened = true
 
                     for (j in animals.indices) {
                         animals[j][CollectedAnimal.mapper]!!.id = j
@@ -65,6 +68,10 @@ class LevelUp : EntitySystem() {
                     reachedEnd = true
                 }
             }
+        }
+
+        if (levelUpHappened) {
+            engine.getSystem<SoundEffects>().play(Sound.MERGE)
         }
     }
 }

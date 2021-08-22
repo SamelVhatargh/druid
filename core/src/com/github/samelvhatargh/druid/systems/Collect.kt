@@ -10,6 +10,7 @@ import com.github.samelvhatargh.druid.getDruid
 import ktx.ashley.allOf
 import ktx.ashley.exclude
 import ktx.ashley.get
+import ktx.ashley.getSystem
 
 class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(CollectedAnimal::class).get()) {
 
@@ -18,6 +19,7 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
         val druid = engine.getDruid()
 
         if (position.vec.len() <= druid.radius) {
+            engine.getSystem<SoundEffects>().play(Sound.POP)
 
             val collectedAnimals = engine.getCollectedAnimals()
             val newCollectedAnimals = mutableListOf<Entity>()
