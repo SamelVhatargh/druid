@@ -44,7 +44,7 @@ class HelpScreen(
                     table {
                         width = tableWidth
                         it.width = tableWidth
-                        label("Animals will run towards you. When they reaches you, they will stand in a circle around you.") { cell ->
+                        label("Animals will run towards you. When they reach you, they will stand in a circle around you.") { cell ->
                             cell.padTop(padding).padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             width = tableWidth
