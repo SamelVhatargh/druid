@@ -106,6 +106,12 @@ class StartScreen(
                 top().center()
                 image(atlas.findRegion("logo"))
             }
+            horizontalGroup {
+                setFillParent(true)
+                padBottom(700f)
+                top().center()
+                image(atlas.findRegion("title"))
+            }
         }
     }
 
