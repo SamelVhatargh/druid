@@ -5,6 +5,7 @@ import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.Camera
 import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.getDruid
+import ktx.ashley.getSystem
 import ktx.math.vec3
 
 class PlayerInput(inputMultiplexer: InputMultiplexer, private val camera: Camera, engine: Engine) :
