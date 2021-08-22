@@ -12,11 +12,15 @@ The game was made over a two day [Kenney Jam 2021](https://itch.io/jam/kenney-ja
 - Beware of the bears! They will eat your animal instead of joining you.
 
 ## Screenshots
- ![](https://github.com/SamelVhatargh/druid/blob/master/screenshots/start.png "Start game screen")
- ![](https://github.com/SamelVhatargh/druid/blob/master/screenshots/opening.png "Beginning of game")
- ![](https://github.com/SamelVhatargh/druid/blob/master/screenshots/midgame.png.png "Middle game")
- ![](https://github.com/SamelVhatargh/druid/blob/master/screenshots/bear.png "It's a bear!")
- ![](https://github.com/SamelVhatargh/druid/blob/master/screenshots/win.png "Win screen")
+ ![Start game screen](https://github.com/SamelVhatargh/druid/blob/master/screenshots/start.png "Start game screen")
+
+ ![Beginning of game](https://github.com/SamelVhatargh/druid/blob/master/screenshots/opening.png "Beginning of game")
+
+ ![Middle game](https://github.com/SamelVhatargh/druid/blob/master/screenshots/midgame.png.png "Middle game")
+
+ ![It's a bear](https://github.com/SamelVhatargh/druid/blob/master/screenshots/bear.png "It's a bear!")
+
+ ![Win screen](https://github.com/SamelVhatargh/druid/blob/master/screenshots/win.png "Win screen")
 
 ## Credits
 All graphical assets are from https://kenney.nl/assets as per rules of the jam.
