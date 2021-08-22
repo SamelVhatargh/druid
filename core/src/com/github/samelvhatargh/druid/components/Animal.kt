@@ -11,6 +11,7 @@ enum class Species(val sprite: String) {
     DUCK("duck"),
     PIG("pig"),
     CHICK("chick"),
+    BEAR("bear")
 }
 
 class Animal : Component, Pool.Poolable {

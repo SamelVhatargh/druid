@@ -5,15 +5,10 @@ import com.badlogic.gdx.InputMultiplexer
 import com.badlogic.gdx.graphics.Camera
 import com.badlogic.gdx.math.MathUtils.random
 import com.github.samelvhatargh.druid.Config
-import com.github.samelvhatargh.druid.components.Animal
-import com.github.samelvhatargh.druid.components.CollectedAnimal
-import com.github.samelvhatargh.druid.components.Position
-import com.github.samelvhatargh.druid.components.Species
+import com.github.samelvhatargh.druid.components.*
 import com.github.samelvhatargh.druid.getCollectedAnimals
-import ktx.ashley.allOf
-import ktx.ashley.entity
-import ktx.ashley.get
-import ktx.ashley.with
+import com.github.samelvhatargh.druid.getDruid
+import ktx.ashley.*
 import ktx.log.logger
 import ktx.math.random
 import ktx.math.vec2
@@ -64,17 +59,34 @@ class Spawner(
     }
 
     private fun spawn(degrees: Float = random(0f, 360f)) {
-        engine.entity {
+        val isPredator = engine.getDruid().animalsCount > 10  && (1..5).random() == 1
+        var speciesType = Species.BEAR
+        if (!isPredator) {
+            val speciesArr = Species.values().toMutableList()
+            speciesArr.remove(Species.BEAR)
+            speciesType = speciesArr.random()
+        }
+
+
+        val entity = engine.entity {
             with<Animal> {
-                species = Species.values().random()
+                species = speciesType
                 speed = ((Config.animalSpeed - Config.animalSpeedVariation)
                         ..(Config.animalSpeed + Config.animalSpeedVariation)).random()
+                if (isPredator) {
+                    level = 666
+                }
             }
             with<Position> {
                 vec = vec2(0f, Config.spawnDistance).apply {
                     rotateDeg(degrees)
                 }
             }
+        }
+
+        if (isPredator) {
+            engine.getSystem<SoundEffects>().play(Sound.BEAR)
+            entity += Predator()
         }
     }
 }

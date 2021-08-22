@@ -35,6 +35,8 @@ class LevelRender(private val batch: SpriteBatch, private val camera: Camera) :
         shapeRenderer.color = when (animal.level) {
             2 -> Color.BLUE
             3 -> Color.GOLD
+            4 -> Color.PURPLE
+            666 -> Color.RED
             else -> Color.LIGHT_GRAY
         }
         var radius = .6f

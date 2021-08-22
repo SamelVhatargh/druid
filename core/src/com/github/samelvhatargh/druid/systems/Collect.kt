@@ -5,6 +5,7 @@ import com.badlogic.ashley.systems.IteratingSystem
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Position
+import com.github.samelvhatargh.druid.components.Predator
 import com.github.samelvhatargh.druid.getCollectedAnimals
 import com.github.samelvhatargh.druid.getDruid
 import ktx.ashley.allOf
@@ -12,7 +13,7 @@ import ktx.ashley.exclude
 import ktx.ashley.get
 import ktx.ashley.getSystem
 
-class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(CollectedAnimal::class).get()) {
+class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(CollectedAnimal::class, Predator::class).get()) {
 
     var interruptUpdate = false
 

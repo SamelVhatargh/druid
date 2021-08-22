@@ -74,6 +74,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
             addSystem(MiscRender(batch, camera, spriteCache))
             addSystem(LevelRender(batch, camera).apply { setProcessing(false) })
             addSystem(AnimalRender(batch, camera, spriteCache).apply { setProcessing(false) })
+            addSystem(Eat().apply { setProcessing(false) })
         }
 
         addScreen(PlayScreen(engine))
