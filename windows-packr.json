@@ -1,0 +1,14 @@
+{
+  "platform": "windows64",
+  "jdk": "/home/samel/Downloads/OpenJDK14U-jre_x64_linux_hotspot_14.0.2_12.tar.gz",
+  "executable": "druid",
+  "classpath": [
+    "desktop/build/libs/desktop-1.0.jar"
+  ],
+  "mainclass": "com.github.samelvhatargh.druid.desktop.DesktopLauncher",
+  "useZgcIfSupportedOs": true,
+  "vmargs": [
+    "Xmx1G"
+  ],
+  "output": "out-windows"
+}
