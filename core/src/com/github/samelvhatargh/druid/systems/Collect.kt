@@ -14,6 +14,18 @@ import ktx.ashley.getSystem
 
 class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(CollectedAnimal::class).get()) {
 
+    var interruptUpdate = false
+
+    override fun update(deltaTime: Float) {
+        interruptUpdate = false
+        for (i in 0 until entities.size()) {
+            processEntity(entities[i], deltaTime)
+            if (interruptUpdate) {
+                return
+            }
+        }
+    }
+
     override fun processEntity(entity: Entity, deltaTime: Float) {
         val position = entity[Position.mapper]!!
         val druid = engine.getDruid()
@@ -49,9 +61,11 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
                 newItemAdded = true
             }
 
-            while (newCollectedAnimals[0][CollectedAnimal.mapper]!!.id != 0) {
+            var k = 0
+            while (newCollectedAnimals[0][CollectedAnimal.mapper]!!.id != 0 && k <= newCollectedAnimals.size) {
                 val temp = newCollectedAnimals.removeAt(0)
                 newCollectedAnimals.add(temp)
+                k++
             }
 
             var i = 0
@@ -63,6 +77,8 @@ class Collect : IteratingSystem(allOf(Animal::class, Position::class).exclude(Co
             druid.animalsCount++
             druid.mana--
             druid.radius += .1f
+
+            interruptUpdate = true
         }
     }
 }
