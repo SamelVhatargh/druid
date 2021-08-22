@@ -71,7 +71,7 @@ class StartScreen(
                             padBottom(padding)
                             stack {
                                 it.left().padRight(200f)
-                                image(atlas.findRegion("runeGrey_slabOutline", 36))
+                                image(atlas.findRegion("button"))
                                 table {
                                     label("How to play") {
                                         it.pad(50f)
@@ -83,7 +83,7 @@ class StartScreen(
                             }
                             stack {
                                 it.expandX()
-                                image(atlas.findRegion("runeGrey_slabOutline", 36))
+                                image(atlas.findRegion("button"))
                                 table {
                                     label("Start") {
                                         it.pad(50f)

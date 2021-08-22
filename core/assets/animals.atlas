@@ -6,539 +6,546 @@ filter: Nearest,Nearest
 repeat: none
 bear
   rotate: false
-  xy: 1834, 725
+  xy: 1183, 743
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 big_forest
   rotate: false
-  xy: 2, 422
+  xy: 244, 722
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 big_rock
   rotate: false
-  xy: 2, 140
+  xy: 244, 440
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 big_spruce
   rotate: false
-  xy: 244, 422
+  xy: 2, 722
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 buffalo
   rotate: false
-  xy: 728, 661
+  xy: 922, 873
   size: 129, 129
   orig: 129, 129
   offset: 0, 0
   index: -1
+button
+  rotate: false
+  xy: 2, 17
+  size: 352, 139
+  orig: 352, 139
+  offset: 0, 0
+  index: -1
 chick
   rotate: false
-  xy: 136, 10
+  xy: 1053, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 chicken
   rotate: false
-  xy: 1444, 726
+  xy: 750, 287
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 cow
   rotate: false
-  xy: 728, 401
+  xy: 728, 547
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 crocodile
   rotate: false
-  xy: 922, 856
+  xy: 486, 176
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 dirt_rock
   rotate: false
-  xy: 2, 704
+  xy: 2, 158
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 dog
   rotate: false
-  xy: 1577, 856
+  xy: 1708, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 duck
   rotate: false
-  xy: 922, 726
+  xy: 1575, 744
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 dude
   rotate: false
-  xy: 728, 792
+  xy: 728, 810
   size: 192, 192
   orig: 192, 192
   offset: 0, 0
   index: -1
 elephant
   rotate: false
-  xy: 728, 531
+  xy: 486, 46
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 frog
   rotate: false
-  xy: 528, 27
+  xy: 1053, 743
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 giraffe
   rotate: false
-  xy: 859, 595
+  xy: 620, 309
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 goat
   rotate: false
-  xy: 486, 158
+  xy: 356, 27
   size: 128, 129
   orig: 128, 129
   offset: 0, 0
   index: -1
 gorilla
   rotate: false
-  xy: 1839, 856
+  xy: 1444, 744
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 grass
   rotate: false
-  xy: 244, 704
+  xy: 486, 722
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 hippo
   rotate: false
-  xy: 1704, 726
+  xy: 916, 417
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 horse
   rotate: false
-  xy: 1708, 856
+  xy: 1313, 744
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 monkey
   rotate: false
-  xy: 859, 465
+  xy: 880, 287
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 moose
   rotate: false
-  xy: 1184, 856
+  xy: 1446, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 narwhal
   rotate: false
-  xy: 2, 6
+  xy: 486, 306
   size: 132, 132
   orig: 132, 132
   offset: 0, 0
   index: -1
 owl
   rotate: false
-  xy: 398, 10
+  xy: 786, 417
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 panda
   rotate: false
-  xy: 1053, 856
+  xy: 1184, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 parrot
   rotate: false
-  xy: 1053, 726
+  xy: 1315, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 penguin
   rotate: false
-  xy: 1446, 856
+  xy: 1839, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 pig
   rotate: false
-  xy: 1314, 726
+  xy: 1836, 744
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 rabbit
   rotate: false
-  xy: 267, 10
+  xy: 922, 743
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 rhino
   rotate: false
-  xy: 989, 466
+  xy: 1119, 613
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 runeBlack_slabOutline
   rotate: false
-  xy: 1293, 536
+  xy: 849, 192
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 35
 runeGrey_slabOutline
   rotate: false
-  xy: 1970, 891
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 1
-runeGrey_slabOutline
-  rotate: false
-  xy: 620, 327
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 2
-runeGrey_slabOutline
-  rotate: false
-  xy: 1119, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 3
-runeGrey_slabOutline
-  rotate: false
-  xy: 1119, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 4
-runeGrey_slabOutline
-  rotate: false
-  xy: 1177, 631
+  xy: 1970, 909
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 5
 runeGrey_slabOutline
   rotate: false
-  xy: 1177, 536
+  xy: 728, 452
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 1
+runeGrey_slabOutline
+  rotate: false
+  xy: 862, 715
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 2
+runeGrey_slabOutline
+  rotate: false
+  xy: 1249, 648
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 4
+runeGrey_slabOutline
+  rotate: false
+  xy: 1010, 322
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 6
 runeGrey_slabOutline
   rotate: false
-  xy: 1235, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 8
-runeGrey_slabOutline
-  rotate: false
-  xy: 1235, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 9
-runeGrey_slabOutline
-  rotate: false
-  xy: 1293, 631
+  xy: 1307, 648
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 7
 runeGrey_slabOutline
   rotate: false
-  xy: 1351, 631
+  xy: 1365, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
-  index: 13
+  index: 8
 runeGrey_slabOutline
   rotate: false
-  xy: 1351, 536
+  xy: 1423, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
-  index: 10
+  index: 9
 runeGrey_slabOutline
   rotate: false
-  xy: 1409, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 11
-runeGrey_slabOutline
-  rotate: false
-  xy: 1409, 536
+  xy: 1481, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 12
 runeGrey_slabOutline
   rotate: false
-  xy: 1467, 631
+  xy: 1539, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
-  index: 34
+  index: 13
 runeGrey_slabOutline
   rotate: false
-  xy: 1467, 536
+  xy: 1597, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
-  index: 16
+  index: 10
 runeGrey_slabOutline
   rotate: false
-  xy: 1525, 631
+  xy: 1655, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
-  index: 17
+  index: 11
 runeGrey_slabOutline
   rotate: false
-  xy: 1525, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 18
-runeGrey_slabOutline
-  rotate: false
-  xy: 1583, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 19
-runeGrey_slabOutline
-  rotate: false
-  xy: 1583, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 20
-runeGrey_slabOutline
-  rotate: false
-  xy: 1641, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 21
-runeGrey_slabOutline
-  rotate: false
-  xy: 1641, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 23
-runeGrey_slabOutline
-  rotate: false
-  xy: 1699, 631
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 24
-runeGrey_slabOutline
-  rotate: false
-  xy: 1699, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 25
-runeGrey_slabOutline
-  rotate: false
-  xy: 1757, 631
+  xy: 1713, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 26
 runeGrey_slabOutline
   rotate: false
-  xy: 1757, 536
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 27
-runeGrey_slabOutline
-  rotate: false
-  xy: 1815, 630
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 28
-runeGrey_slabOutline
-  rotate: false
-  xy: 1873, 630
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 29
-runeGrey_slabOutline
-  rotate: false
-  xy: 1815, 535
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 15
-runeGrey_slabOutline
-  rotate: false
-  xy: 1873, 535
-  size: 56, 93
-  orig: 56, 93
-  offset: 0, 0
-  index: 22
-runeGrey_slabOutline
-  rotate: false
-  xy: 1931, 630
+  xy: 1771, 649
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 14
 runeGrey_slabOutline
   rotate: false
-  xy: 1931, 535
+  xy: 1829, 649
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 34
+runeGrey_slabOutline
+  rotate: false
+  xy: 1887, 649
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 16
+runeGrey_slabOutline
+  rotate: false
+  xy: 1945, 649
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 17
+runeGrey_slabOutline
+  rotate: false
+  xy: 1966, 779
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 18
+runeGrey_slabOutline
+  rotate: false
+  xy: 617, 211
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 19
+runeGrey_slabOutline
+  rotate: false
+  xy: 617, 116
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 20
+runeGrey_slabOutline
+  rotate: false
+  xy: 675, 214
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 21
+runeGrey_slabOutline
+  rotate: false
+  xy: 675, 119
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 23
+runeGrey_slabOutline
+  rotate: false
+  xy: 733, 192
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 24
+runeGrey_slabOutline
+  rotate: false
+  xy: 791, 192
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 25
+runeGrey_slabOutline
+  rotate: false
+  xy: 907, 192
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 27
+runeGrey_slabOutline
+  rotate: false
+  xy: 965, 192
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 28
+runeGrey_slabOutline
+  rotate: false
+  xy: 733, 97
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 29
+runeGrey_slabOutline
+  rotate: false
+  xy: 791, 97
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 15
+runeGrey_slabOutline
+  rotate: false
+  xy: 849, 97
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 3
+runeGrey_slabOutline
+  rotate: false
+  xy: 907, 97
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: 22
+runeGrey_slabOutline
+  rotate: false
+  xy: 965, 97
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 30
 runeGrey_slabOutline
   rotate: false
-  xy: 1119, 441
+  xy: 617, 21
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 31
 runeGrey_slabOutline
   rotate: false
-  xy: 1177, 441
+  xy: 675, 24
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 32
 runeGrey_slabOutline
   rotate: false
-  xy: 1235, 441
+  xy: 733, 2
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 33
 runeGrey_slabOutline
   rotate: false
-  xy: 1293, 441
+  xy: 791, 2
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 35
 runeGrey_slabOutline
   rotate: false
-  xy: 1351, 441
+  xy: 849, 2
   size: 56, 93
   orig: 56, 93
   offset: 0, 0
   index: 36
 sloth
   rotate: false
-  xy: 1315, 856
+  xy: 1577, 874
   size: 129, 128
   orig: 129, 128
   offset: 0, 0
   index: -1
 small_forest
   rotate: false
-  xy: 486, 704
+  xy: 244, 158
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 small_rock
   rotate: false
-  xy: 244, 140
+  xy: 2, 440
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 small_spruce
   rotate: false
-  xy: 486, 422
+  xy: 486, 440
   size: 240, 280
   orig: 240, 280
   offset: 0, 0
   index: -1
 snake
   rotate: false
-  xy: 1574, 726
+  xy: 859, 547
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 walrus
   rotate: false
-  xy: 989, 596
+  xy: 989, 613
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 whale
   rotate: false
-  xy: 486, 289
+  xy: 728, 677
   size: 132, 131
   orig: 132, 131
   offset: 0, 0
   index: -1
 white
   rotate: false
-  xy: 2, 2
+  xy: 2028, 1000
   size: 2, 2
   orig: 2, 2
   offset: 0, 0
   index: -1
 zebra
   rotate: false
-  xy: 1184, 726
+  xy: 1706, 744
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
