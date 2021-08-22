@@ -6,8 +6,8 @@ import com.badlogic.gdx.graphics.Camera
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
-import com.github.samelvhatargh.druid.SpriteCache
 import com.github.samelvhatargh.druid.components.Animal
+import com.github.samelvhatargh.druid.components.Animation
 import com.github.samelvhatargh.druid.components.Position
 import ktx.ashley.allOf
 import ktx.ashley.get
@@ -26,6 +26,7 @@ class LevelRender(private val batch: SpriteBatch, private val camera: Camera) :
 
     override fun processEntity(entity: Entity, deltaTime: Float) {
         val animal = entity[Animal.mapper]!!
+        val animation = entity[Animation.mapper]
         val position = entity[Position.mapper]!!.vec
 
         shapeRenderer.color = when (animal.level) {
@@ -33,7 +34,12 @@ class LevelRender(private val batch: SpriteBatch, private val camera: Camera) :
             3 -> Color.GOLD
             else -> Color.LIGHT_GRAY
         }
-        shapeRenderer.circle(position.x, position.y, .6f, 20)
+        var radius = .6f
+
+        if (animation != null) {
+            radius *= animation.size
+        }
+        shapeRenderer.circle(position.x, position.y, radius, 20)
 
     }
 }

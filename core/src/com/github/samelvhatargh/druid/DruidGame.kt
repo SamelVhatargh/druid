@@ -70,6 +70,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
             addSystem(LevelUp().apply { setProcessing(false) })
             addSystem(EndGame(game).apply { setProcessing(false) })
             addSystem(CollectedAnimalsPositionCalculator().apply { setProcessing(false) })
+            addSystem(Animation())
             addSystem(MiscRender(batch, camera, spriteCache))
             addSystem(LevelRender(batch, camera).apply { setProcessing(false) })
             addSystem(AnimalRender(batch, camera, spriteCache).apply { setProcessing(false) })

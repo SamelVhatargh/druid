@@ -3,11 +3,13 @@ package com.github.samelvhatargh.druid.systems
 import com.badlogic.ashley.core.Entity
 import com.badlogic.ashley.core.EntitySystem
 import com.github.samelvhatargh.druid.components.Animal
+import com.github.samelvhatargh.druid.components.Animation
 import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.getCollectedAnimals
 import com.github.samelvhatargh.druid.getDruid
 import ktx.ashley.get
 import ktx.ashley.getSystem
+import ktx.ashley.plusAssign
 import ktx.log.logger
 
 class LevelUp : EntitySystem() {
@@ -48,6 +50,7 @@ class LevelUp : EntitySystem() {
                 if (previousAnimal.species == currentAnimal.species && currentAnimal.species == nextAnimal.species
                     && previousAnimal.level == currentAnimal.level && currentAnimal.level == nextAnimal.level) {
                     currentAnimal.level++
+                    currentEntity += Animation()
                     engine.removeEntity(previousEntity)
                     engine.removeEntity(nextEntity)
                     engine.getDruid().animalsCount -= 2
