@@ -59,7 +59,7 @@ class Spawner(
     }
 
     private fun spawn(degrees: Float = random(0f, 360f)) {
-        val isPredator = engine.getDruid().animalsCount > 10  && (1..5).random() == 1
+        val isPredator = engine.getDruid().animalsCount > 10  && (1..10).random() == 1
         var speciesType = Species.BEAR
         if (!isPredator) {
             val speciesArr = Species.values().toMutableList()
