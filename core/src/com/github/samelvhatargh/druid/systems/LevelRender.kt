@@ -6,11 +6,14 @@ import com.badlogic.gdx.graphics.Camera
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.Animation
+import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Position
 import ktx.ashley.allOf
 import ktx.ashley.get
+import ktx.ashley.has
 import ktx.graphics.use
 
 class LevelRender(private val batch: SpriteBatch, private val camera: Camera) :
@@ -39,6 +42,11 @@ class LevelRender(private val batch: SpriteBatch, private val camera: Camera) :
         if (animation != null) {
             radius *= animation.size
         }
+
+        if (Config.biggerMovingAnimals && !entity.has(CollectedAnimal.mapper)) {
+            radius *= Config.biggerMovingAnimalsSize
+        }
+
         shapeRenderer.circle(position.x, position.y, radius, 20)
 
     }

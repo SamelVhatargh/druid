@@ -23,4 +23,6 @@ object Config {
 
     //gameplay
     const val maxMana = 4 * 3 * 3 - 9
+    const val biggerMovingAnimals = true
+    const val biggerMovingAnimalsSize = 1.25f
 }

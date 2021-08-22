@@ -4,9 +4,11 @@ import com.badlogic.ashley.core.Entity
 import com.badlogic.ashley.systems.IteratingSystem
 import com.badlogic.gdx.graphics.Camera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.SpriteCache
 import com.github.samelvhatargh.druid.components.Animal
 import com.github.samelvhatargh.druid.components.Animation
+import com.github.samelvhatargh.druid.components.CollectedAnimal
 import com.github.samelvhatargh.druid.components.Position
 import ktx.ashley.allOf
 import ktx.ashley.get
@@ -38,6 +40,11 @@ class AnimalRender(private val batch: SpriteBatch, private val camera: Camera, p
         if (animation != null) {
             positionOffset *= animation.size
             sprite.setSize(animation.size, animation.size)
+        }
+
+        if (Config.biggerMovingAnimals && !entity.has(CollectedAnimal.mapper)) {
+            sprite.setSize(Config.biggerMovingAnimalsSize, Config.biggerMovingAnimalsSize)
+            positionOffset *= Config.biggerMovingAnimalsSize
         }
 
         sprite.setPosition(position.x - positionOffset, position.y - positionOffset)
