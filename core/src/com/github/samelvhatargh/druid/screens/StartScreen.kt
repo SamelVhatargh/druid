@@ -10,6 +10,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport
 import com.github.samelvhatargh.druid.Config
 import com.github.samelvhatargh.druid.DruidGame
 import ktx.actors.onClick
+import ktx.actors.plusAssign
 import ktx.scene2d.*
 
 class StartScreen(
@@ -98,6 +99,12 @@ class StartScreen(
                         pack()
                     }
                 }
+            }
+            horizontalGroup {
+                setFillParent(true)
+                padTop(700f)
+                top().center()
+                image(atlas.findRegion("logo"))
             }
         }
     }
