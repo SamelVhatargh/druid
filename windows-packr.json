@@ -1,6 +1,6 @@
 {
   "platform": "windows64",
-  "jdk": "/home/samel/Downloads/OpenJDK14U-jre_x64_linux_hotspot_14.0.2_12.tar.gz",
+  "jdk": "/home/samel/Downloads/OpenJDK8U-jre_x64_windows_hotspot_8u302b08.zip",
   "executable": "druid",
   "classpath": [
     "desktop/build/libs/desktop-1.0.jar"
@@ -10,5 +10,9 @@
   "vmargs": [
     "Xmx1G"
   ],
+  "removelibs": [
+    "desktop/build/libs/desktop-1.0.jar"
+  ],
+  "minimizejre": "hard",
   "output": "out-windows"
 }
