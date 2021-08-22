@@ -10,16 +10,15 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.utils.viewport.FitViewport
-import com.github.samelvhatargh.druid.screens.LoseScreen
-import com.github.samelvhatargh.druid.screens.PlayScreen
-import com.github.samelvhatargh.druid.screens.StartScreen
-import com.github.samelvhatargh.druid.screens.WinScreen
+import com.github.samelvhatargh.druid.screens.*
 import com.github.samelvhatargh.druid.systems.*
 import ktx.app.KtxGame
 import ktx.app.KtxScreen
 import ktx.app.clearScreen
 import ktx.scene2d.Scene2DSkin
 import ktx.scene2d.label
+import ktx.style.button
+import ktx.style.imageButton
 import ktx.style.label
 import ktx.style.skin
 
@@ -44,6 +43,10 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
                 font = BitmapFont(Gdx.files.internal("future.fnt"))
                 fontColor = Color.WHITE
                 font.data.scale(.1f)
+            }
+            button {
+            }
+            imageButton {
             }
         }
 
@@ -79,6 +82,7 @@ class DruidGame : KtxGame<KtxScreen>(clearScreen = false) {
 
         addScreen(PlayScreen(engine))
         addScreen(LoseScreen(engine, spriteAtlas, this, inputMultiplexer))
+        addScreen(HelpScreen(engine, spriteAtlas, this, inputMultiplexer))
         addScreen(WinScreen(engine, spriteAtlas, this, inputMultiplexer))
         addScreen(StartScreen(engine, spriteAtlas, this, inputMultiplexer))
         setScreen<StartScreen>()

@@ -12,7 +12,7 @@ import com.github.samelvhatargh.druid.DruidGame
 import ktx.actors.onClick
 import ktx.scene2d.*
 
-class StartScreen(
+class HelpScreen(
     engine: Engine,
     private val atlas: TextureAtlas,
     private val game: DruidGame,
@@ -30,6 +30,10 @@ class StartScreen(
 
         stage.actors {
             table {
+
+                onClick {
+                    game.setScreen<PlayScreen>()
+                }
                 setFillParent(true)
                 stack {
                     image(atlas.findRegion("white")) {
@@ -40,7 +44,7 @@ class StartScreen(
                     table {
                         width = tableWidth
                         it.width = tableWidth
-                        label("Hello apprentice!") { cell ->
+                        label("Animals will run towards you. When they reaches you, they will stand in a circle around you.") { cell ->
                             cell.padTop(padding).padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             width = tableWidth
@@ -48,7 +52,15 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        label("You have to prove yourself, if you want to become a full member of our druid circle.") { cell ->
+                        label("Move your mouse right or left to rotate the circle of animals to the right or left.") { cell ->
+                            cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
+                                .prefWidth(tableWidth)
+                            width = tableWidth
+                            setAlignment(Align.center)
+                            wrap = true
+                        }
+                        row()
+                        label("If you put 3 gray animals of the same type next to each other, they will merge into 1 blue one. 3 blue next to each other will merge into 1 gold.") { cell ->
                             cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             setAlignment(Align.center)
@@ -56,7 +68,7 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        label("Charm animals, train them and show us that you have enough mana to keep them around.") { cell ->
+                        label("Collect at least one golden animal of each type to win.") { cell ->
                             cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
                                 .prefWidth(tableWidth)
                             setAlignment(Align.center)
@@ -64,36 +76,26 @@ class StartScreen(
                             wrap = true
                         }
                         row()
-                        table {
-                            left()
-//                            setFillParent(true)
-                            bottom()
-                            padBottom(padding)
-                            stack {
-                                it.left().padRight(200f)
-                                image(atlas.findRegion("runeGrey_slabOutline", 36))
-                                table {
-                                    label("How to play") {
-                                        it.pad(50f)
-                                    }
-                                }
-                                onClick {
-                                    game.setScreen<HelpScreen>()
-                                }
-                            }
-                            stack {
-                                it.expandX()
-                                image(atlas.findRegion("runeGrey_slabOutline", 36))
-                                table {
-                                    label("Start") {
-                                        it.pad(50f)
-                                    }
-                                }
-                                onClick {
-                                    game.setScreen<PlayScreen>()
-                                }
-                            }
+                        label("Each gathered animal spends one mana. If you run out of mana, you lose.") { cell ->
+                            cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
+                                .prefWidth(tableWidth)
+                            setAlignment(Align.center)
+                            width = tableWidth
+                            wrap = true
                         }
+                        row()
+                        label("Beware of the bears! They will eat your animal instead of joining you.") { cell ->
+                            cell.padBottom(padding).fillX().expandX().center().minWidth(tableWidth)
+                                .prefWidth(tableWidth)
+                            setAlignment(Align.center)
+                            width = tableWidth
+                            wrap = true
+                        }
+                        row()
+                        label("Click anywhere to start.", style = "small") { cell ->
+                            cell.padBottom(padding)
+                        }
+
 
                         pack()
                     }
