@@ -18,7 +18,10 @@ class SoundEffects : EntitySystem() {
         when (sound) {
             Sound.POP -> pop.play()
             Sound.TURN -> turn.play()
-            Sound.MERGE -> merge.play()
+            Sound.MERGE -> {
+                pop.stop()
+                merge.play()
+            }
         }
     }
 }

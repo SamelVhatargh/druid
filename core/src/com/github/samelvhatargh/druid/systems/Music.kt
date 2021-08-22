@@ -10,6 +10,7 @@ class Music : EntitySystem() {
 
     override fun addedToEngine(engine: Engine) {
         super.addedToEngine(engine)
+        music.volume = .5f
         music.play()
     }
 
