@@ -16,7 +16,7 @@ The game was made over a two day [Kenney Jam 2021](https://itch.io/jam/kenney-ja
 
  ![Beginning of game](https://github.com/SamelVhatargh/druid/blob/master/screenshots/opening.png "Beginning of game")
 
- ![Middle game](https://github.com/SamelVhatargh/druid/blob/master/screenshots/midgame.png.png "Middle game")
+ ![Middle game](https://github.com/SamelVhatargh/druid/blob/master/screenshots/midgame.png "Middle game")
 
  ![It's a bear](https://github.com/SamelVhatargh/druid/blob/master/screenshots/bear.png "It's a bear!")
 
