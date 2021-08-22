@@ -12,7 +12,7 @@ object Config {
     const val fullRotateDistance = 9f
 
     //move
-    const val animalSpeed = 1.5f
+    const val animalSpeed = 1.75f
     const val animalSpeedVariation = .25f
 
     //spawn
