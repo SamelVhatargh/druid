@@ -1,0 +1,18 @@
+{
+  "platform": "linux64",
+  "jdk": "/home/samel/Downloads/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz",
+  "executable": "druid",
+  "classpath": [
+    "desktop/build/libs/desktop-1.0.jar"
+  ],
+  "mainclass": "com.github.samelvhatargh.druid.desktop.DesktopLauncher",
+  "useZgcIfSupportedOs": true,
+  "vmargs": [
+    "Xmx1G"
+  ],
+  "removelibs": [
+    "desktop/build/libs/desktop-1.0.jar"
+  ],
+  "minimizejre": "hard",
+  "output": "out-linux"
+}
