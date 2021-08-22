@@ -10,6 +10,9 @@ class Music : EntitySystem() {
 
     override fun addedToEngine(engine: Engine) {
         super.addedToEngine(engine)
+        music.setOnCompletionListener {
+            it.play()
+        }
         music.volume = .5f
         music.play()
     }
